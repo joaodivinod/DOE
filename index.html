@@ -28,28 +28,17 @@
         </form>
     </section>
     <main>
-        <h2>Ultimos <span>Doadores</span></h2>
+        <h2>Últimos <span>doadores</span></h2>
+
         <section class="donors">
-            <div class="donor">
-                <div class="blood">AB+</div>
-                <p>João Divino</p>
+            {% for donor in donors %}
+
+            <div class= "donor">
+                <div class="blood">{{donor.blood}}</div>
+                <p>{{donor.name}}</p>
             </div>
 
-            <div class="donor">
-                <div class="blood">AB+</div>
-                <p>Ana Luiza</p>
-            </div>
-
-            <div class="donor">
-                <div class="blood">AB+</div>
-                <p>Pedro Silva</p>
-            </div>
-
-            <div class="donor">
-                <div class="blood">AB+</div>
-                <p>Carlos Antônio</p>
-            </div>
-
+            {% endfor %}
         </section>
     </main>
     <footer>
